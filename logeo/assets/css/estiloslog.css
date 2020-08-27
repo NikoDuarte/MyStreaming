@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .content {
+    max-width: 40rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .header-video video {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  .header-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.11);
+    z-index: 1;
+    opacity: .85;
+  }
+  
+
+
+  .header-content {
+    width: 100%;
+    height: 360px;
+    z-index: 2;
+    background-color: rgba(20, 20, 20, 0.226);
+    border-radius: 10px;
+    -webkit-box-shadow: -5px 2px 43px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 2px 43px 9px rgba(0,0,0,0.75);
+    box-shadow: -5px 2px 43px 9px rgba(0,0,0,0.75);  
+  }
+  
+  .header-content h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+    font-family: 'Londrina Solid', cursive;
+    color: yellow;
+  }
+  
+  .header-content p {
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    font-family: 'Londrina Solid', cursive;
+  }
+  
+  @media (max-width: 960px) {
+    .content {
+      padding: 0 3rem 0 3rem;
+    }
+  }
+
+  .login-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  
+  form{
+    width: 100%;
+  }
+      
+  .login-content .input-div{
+    position: relative;
+      display: grid;
+      grid-template-columns: 7% 93%;
+      margin: 25px 0;
+      padding: 0 0;
+      border-bottom: 2px solid #d9d9d9;
+  }
+  
+  .login-content .input-div.one{
+    margin-top: 0;
+  }
+  
+  .i{
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .i i{
+    transition: .3s;
+  }
+  
+  .input-div > div{
+      position: relative;
+    height: 45px;
+  }
+  
+  .input-div > div > h5{
+    text-align: right;
+    position: right;
+    left: 10px;
+    top: 25%;
+    transform: translateY(-50%);
+    color: yellow;
+    font-size: 22px;
+    font-family: 'Londrina Solid', cursive;
+    transition: .3s;
+  }
+  
+  .input-div:before, .input-div:after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 1.5px;
+    background-color: #ffd900;
+    transition: .4s;
+  }
+  
+  .input-div:before{
+    right: 50%;
+  }
+  
+  .input-div:after{
+    left: 50%;
+  }
+  
+  .input-div.focus:before, .input-div.focus:after{
+    width: 50%;
+  }
+  
+  .input-div.focus > div > h5{
+    top: -30px;
+    font-size: 15px;
+  }
+  
+  .input-div.focus > .i > i{
+    color: #ffd900;
+  }
+  
+  .input-div > div > input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: rgb(221, 221, 221);
+    font-family: 'Londrina Solid', cursive;
+  }
+  
+  .input-div.pass{
+    margin-bottom: 4px;
+  }
+  
+  a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 1.2rem;
+    transition: .3s;
+    font-family: 'Londrina Solid', cursive;
+  }
+  
+  a:hover{
+    color: #ffd900;
+  }
+  
+  .btn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: linear-gradient(to right, #ffff38 yellow, #ffff38);
+    background-size: 200%;
+    font-size: 1.2rem;
+    font-family: 'Londrina Solid', cursive;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+  }
+  .btn:hover{
+    background-position: right;
+  }
+  
+  
+  @media screen and (max-width: 1050px){
+    .container{
+      grid-gap: 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 1000px){
+    form{
+      width: 290px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 900px){
+    .container{
+      grid-template-columns: 1fr;
+    }
+      
+    .login-content{
+      justify-content: center;
+    }
+  }
+
+
+  .ok {
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+    font-style: 14px;
+    width: 600px;
+    border-radius: 7px;
+    padding: 12px;
+    background-color: yellow;
+    color: #000000;
+  }
+
+
+  .bad {
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+    font-style: 14px;
+    width: 600px;
+    border-radius: 7px;
+    padding: px;
+    background-color: #a22;
+    color: #ffffff;
+    z-index: 10;
+  }
